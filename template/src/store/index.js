@@ -13,6 +13,7 @@ const mutations = {}{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 export default new Vuex.Store({
   state,
+  getters,
   actions,
   mutations{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
 }){{#if_eq lintConfig "airbnb"}};{{/if_eq}}

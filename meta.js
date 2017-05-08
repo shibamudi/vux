@@ -52,6 +52,22 @@ module.exports = {
       "type": "confirm",
       "message": "Install axios?"
     },
+    "framework": {
+      "type": "confirm",
+      "message": "Use UI Framework (muse-ui)?"
+    },
+    "frameworkConfig": {
+      "when": "framework",
+      "type": "list",
+      "message": "Pick an UI Framework",
+      "choices": [
+        {
+          "name": "Muse-UI (http://www.muse-ui.org)",
+          "value": "muse-ui",
+          "short": "Muse-UI"
+        }
+      ]
+    }
     "lint": {
       "type": "confirm",
       "message": "Use ESLint to lint your code?"

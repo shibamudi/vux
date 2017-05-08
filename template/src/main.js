@@ -3,6 +3,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 {{/if_eq}}
 import Vue from 'vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{#if_eq frameworkConfig "muse-ui"}}
+import MuseUI from 'muse-ui'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import 'muse-ui/dist/muse-ui.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+import 'material-design-icons/iconfont/material-icons.css'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{/if_eq}}
 import App from './App'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#router}}
 import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
@@ -10,6 +15,10 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{#vuex}}
 import store from './store'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/vuex}}
+
+{{#if_eq frameworkConfig "muse-ui"}}
+Vue.use(MuseUI){{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+{{/if_eq}}
 
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
